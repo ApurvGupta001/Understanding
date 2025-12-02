@@ -10,8 +10,12 @@ private:
 public:
     User(int id, string name) : userId(id), userName(name) {}
 
-    int getUserId() const { return userId; }
-    string getUserName() const { return userName; }
+    int getUserId() {
+        return userId; 
+    }
+    string getUserName(){ 
+        return userName; 
+    }
 };
 
 class Group {
@@ -34,6 +38,36 @@ public:
             cout << "User ID: " << user->getUserId() << ", User Name: " << user->getUserName() << endl;
         }
     }
+};
+
+class Expense {
+private:
+    int expenseId;
+    string expenseName;
+
+protected:
+    Expense(int id, string name) : expenseId(id), expenseName(expenseName) {}
+
+public:
+    string getExpenseName(){
+        return expenseName;
+    }
+
+    int getExpenseId() {
+        return expenseId;
+    }
+};
+
+class EqualSplit :: public Expense {
+
+};
+
+class RatioSplit :: public Expense {
+    
+};
+
+class UnequalSplit :: public Expense {
+    
 };
 
 int main() {
